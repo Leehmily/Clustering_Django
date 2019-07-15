@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>模型初始特征选择</title>
+    <link rel="stylesheet" href="../static/semantic.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/semantic.js"></script>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <style>
+        td{width:500px;overflow:hidden}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../select_tables/">聚类特征选择</a></li>
+                    <li><a>特征属性选择</a></li>
+                    <li><a>模型参数选择</a></li>
+                    <li><a>聚类结果输出</a></li>
+                    <!-- <li><a>最终选择的特征</a></li> -->
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+<form action="/variables_type/" method="post">
+    {% csrf_token %}
+    {% for key, value in columns_dict.items %}
+        <div style="white-space: nowrap; overflow: hidden; overflow-x: scroll; -webkit-backface-visibility: hidden; -webkit-overflow-scrolling: touch;">
+            <h3 align="center">{{ key }}</h3>
+            <table class="table table-bordered">
+                <tbody>
+
+                <tr>
+                    {% for result in value %}
+                        <td><input type="checkbox" name="{{ key }}" value="{{ result }}" checked="checked">{{ result }}
+                        </td>
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+    {% endfor %}
+    <div style="display: flex;justify-content: center;font-size: 3px">
+        <input class="btn btn-primary" type="submit" value="提交特征">
+        <input class="btn btn-default" type="reset" value="重置特征">
+    </div>
+</form>
+</body>
+
+</html>
