@@ -18,25 +18,25 @@ python manage.py runserver
 
 1. 数据源表和字段的选择界面
 
-<div align="center"> <img src="./pic/1.jpg"/> </div>
+<div align="center"> <img src="./pic/1.png"/> </div>
 
 2. 字段属性的选择界面
 
-<div align="center"> <img src="./pic/2.jpg"/> </div>
+<div align="center"> <img src="./pic/2.png"/> </div>
 
 3. 模型参数的配置界面
 
-<div align="center"> <img src="./pic/3.jpg"/> </div>
+<div align="center"> <img src="./pic/3.png"/> </div>
 
 4. 聚类分析图表展示（手肘分析图， 变量分布图）
 
-<div align="center"> <img src="./pic/4.jpg"/> </div>
-<div align="center"> <img src="./pic/5.jpg"/> </div>
+<div align="center"> <img src="./pic/4.png"/> </div>
+<div align="center"> <img src="./pic/5.png"/> </div>
 
 5. 文本特征分析所需特征手动选择
 
-<div align="center"> <img src="./pic/6.jpg"/> </div>
+<div align="center"> <img src="./pic/6.png"/> </div>
 
 6. 文本特征词云图展示
-<div align="center"> <img src="./pic/7.jpg"/> </div>
+<div align="center"> <img src="./pic/7.png"/> </div>
 
